@@ -8,7 +8,13 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepositoy memberRepositoy = new MemoryMemberRepository();
+
+
+    private final MemberRepositoy memberRepositoy;
+
+    public MemberService(MemberRepositoy memberRepositoy) {
+        this.memberRepositoy = memberRepositoy;
+    }
 
     /*
     회원가입
